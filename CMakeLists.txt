@@ -6,8 +6,6 @@ set (CMAKE_CXX_STANDARD 20)
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 
-set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/lib)
-
 ##################
 # Git Submodules #
 ##################
@@ -39,9 +37,9 @@ if(WIN32)
     set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Debug;Release" FORCE)
 endif()
 
-#############
-# Libraries #
-#############
+#########
+# PEPNG #
+#########
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/pepng)
 
@@ -75,10 +73,3 @@ if(EMSCRIPTEN)
         message(STATUS CMAKE_CXX_FLAGS " --preload-file ${file}@/${relative_file}")
     endforeach()
 endif()
-
-#################
-# Configuration #
-#################
-
-set(EXTRA_COMPONENTS OFF)
-set(EXTRA_OBJECTS OFF)
