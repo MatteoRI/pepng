@@ -1,0 +1,3 @@
+[submodule "thirdparty/pepng"]
+	path = thirdparty/pepng
+	url = https://github.com/pepng-CU/pepng.git
