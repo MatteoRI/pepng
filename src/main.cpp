@@ -15,6 +15,9 @@ int main() {
     // Attempts to initialize GLFW and IMGUI (if included). If it fails, kill the program by returning -1.
     if (!pepng::init("PEPNG", 1920, 1080)) return -1;
 
+    // Sets the wpr;d background color.
+    pepng::set_background_color(glm::vec3(0.0f, 1.0f, 0.0f));
+
     /**
      * PATHS
      * 
