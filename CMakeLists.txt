@@ -12,6 +12,8 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 
 find_package(Git QUIET)
 
+set(EXTRA_COMPONENTS ON)
+
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
     option(GIT_SUBMODULE "Adds submodules during build" ON)
     if(GIT_SUBMODULE)
